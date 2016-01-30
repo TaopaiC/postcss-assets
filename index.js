@@ -219,7 +219,7 @@ Assets.prototype.postcss = function (css) {
   css.walkDecls(function (decl) {
 
     // Store the input file path of the file being processed
-    self.inputPath = decl.source.input.file;
+    self.inputPath = decl.source && decl.source.input && decl.source.input.file;
 
     try {
 
